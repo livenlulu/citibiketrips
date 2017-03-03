@@ -1,4 +1,4 @@
-var layer = L.tileLayer('https://api.mapbox.com/styles/v1/livenlulu/civklqgt8007y2kqqt5b61zc9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibGl2ZW5sdWx1IiwiYSI6ImNpZ3h0ZzltbzB1cTQ0cG0zamthcno1dmwifQ.vZrmbXCCq15ZVuF6g6vhkA',{
+var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png',{
     attribution: ''
 });
 
@@ -106,15 +106,11 @@ var panOptions = {
 
 
   function getColor(d) {
-<<<<<<< Updated upstream
-    return d > 80 ? '#840303' :
-           d > 70  ? '#9A0000' :
-           d > 60  ? '#b31c1b' :
-=======
+
     return d > 120 ? '#840303' :
            d > 80  ? '#9A0000' :
            d > 70  ? '#b31c1b' :
->>>>>>> Stashed changes
+
            // d > 60  ? '#75507b' :
            d > 50  ? '#BE0E0E' :
            d > 40  ? '#DA4747' :
@@ -196,11 +192,9 @@ var panOptions = {
     updateChart3(e.target.feature.properties);
 
     // console.log(layer.feature.properties.VALUE2);
-<<<<<<< Updated upstream
-    $('#side').html('<center><h4 style="color:white; padding-top:10px; padding-bottom:5px; margin-top: 0px; margin-bottom: 0px;">Unoccupied Apartments, NYC - 2016' + '<br><b><font size ="5" color="white">' + layer.feature.properties.VALUE2 + '%' +'</font></b> ' + '</h4></center>');
-=======
+
     $('#side').html('<center><h4 style="color:white; padding-top:10px; padding-bottom:5px; margin-top: 0px; margin-bottom: 0px;">Citibike Routes from Washington Square, NYC</h4></center>');
->>>>>>> Stashed changes
+
   	}
 
   function resetHighlight(e) {
